@@ -41,9 +41,11 @@ nav.scrolled{border-color:var(--border)}
 .hero-tagline{font-size:1.1rem;font-weight:300;color:var(--ink2);line-height:1.85;max-width:520px;margin-bottom:3rem;opacity:0;animation:slideUp .7s .7s forwards}
 .hero-tagline strong{font-weight:500;color:var(--ink)}
 .hero-tagline em{font-style:italic;color:var(--green)}
-.hero-btns{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap;opacity:0;animation:slideUp .7s .85s forwards}
+.hero-btns{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;opacity:0;animation:slideUp .7s .85s forwards}
 .btn-fill{background:var(--ink);color:var(--cream);font-size:.85rem;font-weight:500;padding:.7rem 2rem;border-radius:40px;text-decoration:none;transition:all .3s;display:inline-block}
 .btn-fill:hover{background:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,92,58,.2)}
+.btn-resume{background:var(--green);color:var(--white);font-size:.85rem;font-weight:500;padding:.7rem 2rem;border-radius:40px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-resume:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,92,58,.25)}
 .btn-line{font-size:.85rem;font-weight:400;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--border2);padding-bottom:2px;transition:all .25s}
 .btn-line:hover{color:var(--green);border-color:var(--green);gap:.7rem}
 .hero-stats{display:flex;gap:2.5rem;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);opacity:0;animation:slideUp .7s 1s forwards}
@@ -78,10 +80,16 @@ nav.scrolled{border-color:var(--border)}
 .about-quote{position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--ink);color:var(--cream);padding:1.5rem 2rem;border-radius:8px;max-width:280px;z-index:2}
 .aq-text{font-family:var(--serif);font-size:1rem;font-weight:300;font-style:italic;line-height:1.55;margin-bottom:.5rem}
 .aq-attr{font-family:var(--mono);font-size:.65rem;font-weight:300;letter-spacing:.08em;color:rgba(244,241,234,.4);text-transform:uppercase}
-.about-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem}
+.about-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
 .ast{border:1px solid var(--border);padding:1.2rem;border-radius:8px;background:var(--cream)}
 .ast-n{font-family:var(--serif);font-size:2.2rem;font-weight:900;color:var(--green);line-height:1;letter-spacing:-.03em}
 .ast-l{font-family:var(--mono);font-size:.68rem;font-weight:300;color:var(--ink3);letter-spacing:.07em;text-transform:uppercase;margin-top:.3rem}
+/* resume download strip */
+.resume-strip{background:var(--green-bg);border-top:1px solid rgba(30,92,58,.1);border-bottom:1px solid rgba(30,92,58,.1);padding:1.8rem 3.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.resume-strip-text{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--green)}
+.resume-strip-sub{font-size:.85rem;font-weight:300;color:var(--ink2);margin-top:.2rem}
+.btn-dl{display:inline-flex;align-items:center;gap:.6rem;background:var(--green);color:var(--white);font-size:.85rem;font-weight:500;padding:.75rem 1.8rem;border-radius:40px;text-decoration:none;transition:all .3s;white-space:nowrap}
+.btn-dl:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,92,58,.2)}
 section{border-bottom:1px solid var(--border)}
 .wrap{max-width:1280px;margin:0 auto;padding:0 3.5rem}
 .sec-hd{display:flex;align-items:flex-end;justify-content:space-between;padding:5rem 0 3.5rem;border-bottom:1px solid var(--border);margin-bottom:4rem;gap:2rem}
@@ -113,20 +121,24 @@ section{border-bottom:1px solid var(--border)}
 .sk-nm{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:.9rem;line-height:1.2}
 .sk-tags{display:flex;flex-wrap:wrap;gap:.38rem}
 .sk-t{font-size:.76rem;font-weight:300;color:var(--ink2);background:var(--cream2);border:1px solid var(--border);padding:.22rem .65rem;border-radius:3px}
+/* PUBLICATIONS — dark section */
 #publications{background:var(--ink);border-bottom:none}
-#publications .sec-title{color:var(--cream)}#publications .sec-title em{color:rgba(244,241,234,.5)}
-#publications .sec-num{color:rgba(244,241,234,.3)}#publications .sec-sub{color:rgba(244,241,234,.4)}
+#publications .sec-title{color:var(--cream)}
+#publications .sec-title em{color:rgba(244,241,234,.5)}
+#publications .sec-num{color:rgba(244,241,234,.3)}
+#publications .sec-sub{color:rgba(244,241,234,.4)}
 #publications .sec-hd{border-color:rgba(244,241,234,.08)}
 .pub-list{padding-bottom:5rem}
-.pub-row{display:grid;grid-template-columns:64px 1fr 40px;align-items:center;gap:2rem;padding:1.8rem 0;border-bottom:1px solid rgba(244,241,234,.07);transition:background .2s,padding-left .3s;cursor:default}
+.pub-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:2rem;padding:1.8rem 0;border-bottom:1px solid rgba(244,241,234,.07);transition:background .2s,padding-left .3s}
 .pub-row:hover{background:rgba(244,241,234,.03);padding-left:.5rem}
 .pub-row:last-child{border-bottom:none}
 .pub-n{font-family:var(--serif);font-size:2.8rem;font-weight:900;letter-spacing:-.04em;color:rgba(244,241,234,.12);line-height:1;transition:color .3s}
 .pub-row:hover .pub-n{color:rgba(244,241,234,.3)}
 .pub-tag{font-family:var(--mono);font-size:.65rem;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,241,234,.3);margin-bottom:.4rem}
-.pub-title{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--cream);line-height:1.3}
-.pub-arr{font-size:1rem;color:rgba(244,241,234,.2);transition:color .25s,transform .25s}
-.pub-row:hover .pub-arr{color:var(--cream);transform:translate(4px,-2px)}
+.pub-title{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--cream);line-height:1.3;margin-bottom:.7rem}
+.pub-rg-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;color:rgba(244,241,234,.5);border:1px solid rgba(244,241,234,.15);padding:.3rem .8rem;border-radius:20px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.pub-rg-btn:hover{color:var(--cream);border-color:rgba(244,241,234,.4);background:rgba(244,241,234,.06)}
+.pub-arr{display:flex;flex-direction:column;align-items:center;gap:.6rem}
 #projects{background:var(--cream)}
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);margin-bottom:5rem}
 .proj-card{padding:2.5rem;border-right:1px solid var(--border);position:relative;overflow:hidden;transition:background .25s}
@@ -183,10 +195,13 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
   .about-inner{grid-template-columns:1fr;gap:3rem;padding:4rem 0}
   .about-right .about-quote{position:static;margin-top:1.5rem;max-width:100%}
   .wrap{padding:0 1.5rem}.about-wrap{padding:0 1.5rem}
+  .resume-strip{padding:1.5rem;flex-direction:column;align-items:flex-start}
   .sec-hd{flex-direction:column;align-items:flex-start;padding:3rem 0 2rem}.sec-sub{text-align:left;max-width:100%}
   .exp-row{grid-template-columns:1fr;gap:1rem}.exp-buls{grid-template-columns:1fr}
   .sk-board,.proj-grid{grid-template-columns:1fr}
   .sk-cell{border-right:none!important}.proj-card{border-right:none}
+  .pub-row{grid-template-columns:48px 1fr;gap:1rem}
+  .pub-arr{display:none}
   .contact-inner{grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 0}
   footer{flex-direction:column;gap:.5rem;padding:1.5rem;text-align:center}
 }
@@ -207,7 +222,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:roshank041089@gmail.com" class="nav-cta">Get in touch →</a>
+  <a href="ROSHAN_RESUME_DEVOPS_ENGINEER.pdf" download class="nav-cta">Download CV ↓</a>
 </nav>
 
 <!-- HERO -->
@@ -223,7 +238,8 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
     </p>
     <div class="hero-btns">
       <a href="mailto:roshank041089@gmail.com" class="btn-fill">Hire me</a>
-      <a href="https://linkedin.com/in/roshan-k-221681200" class="btn-line" target="_blank">LinkedIn ↗</a>
+      <a href="ROSHAN_RESUME_DEVOPS_ENGINEER.pdf" download class="btn-resume">⬇ Download Resume</a>
+      <a href="https://www.linkedin.com/in/roshan-k-221681200" class="btn-line" target="_blank">LinkedIn ↗</a>
       <a href="https://github.com/Rkaka1041" class="btn-line" target="_blank">GitHub ↗</a>
     </div>
     <div class="hero-stats">
@@ -290,7 +306,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
           <span class="chip">🤖 AI Research</span>
           <span class="chip">📍 Chicago, IL</span>
         </div>
-        <div class="about-stat-row" style="margin-top:2.5rem">
+        <div class="about-stat-row">
           <div class="ast"><div class="ast-n">6+</div><div class="ast-l">Years in cloud ops</div></div>
           <div class="ast"><div class="ast-n">5</div><div class="ast-l">Published papers</div></div>
           <div class="ast"><div class="ast-n">3</div><div class="ast-l">Cloud platforms</div></div>
@@ -309,6 +325,15 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
     </div>
   </div>
 </section>
+
+<!-- RESUME DOWNLOAD STRIP -->
+<div class="resume-strip reveal">
+  <div>
+    <div class="resume-strip-text">📄 Want the full picture?</div>
+    <div class="resume-strip-sub">Download my resume — all experience, skills, and achievements in one place.</div>
+  </div>
+  <a href="ROSHAN_RESUME_DEVOPS_ENGINEER.pdf" download class="btn-dl">⬇ Download Resume PDF</a>
+</div>
 
 <!-- EXPERIENCE -->
 <section id="experience">
@@ -337,9 +362,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
             <li>Enforced least-privilege and environment isolation across AWS &amp; Kubernetes</li>
             <li>Authored runbooks, security standards, and compliance documentation</li>
           </ul>
-          <div class="exp-tags">
-            <span class="etag">AWS EKS</span><span class="etag">Terraform</span><span class="etag">Kubernetes</span><span class="etag">Jenkins</span><span class="etag">GitHub Actions</span><span class="etag">Prometheus</span><span class="etag">Grafana</span><span class="etag">IAM</span><span class="etag">RBAC</span>
-          </div>
+          <div class="exp-tags"><span class="etag">AWS EKS</span><span class="etag">Terraform</span><span class="etag">Kubernetes</span><span class="etag">Jenkins</span><span class="etag">GitHub Actions</span><span class="etag">Prometheus</span><span class="etag">Grafana</span><span class="etag">IAM</span><span class="etag">RBAC</span></div>
         </div>
       </div>
       <div class="exp-row stagger-child">
@@ -359,9 +382,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
             <li>Implemented Azure Monitor, Log Analytics, and Grafana observability</li>
             <li>Drove cloud cost optimization via right-sizing and resource cleanup</li>
           </ul>
-          <div class="exp-tags">
-            <span class="etag">Azure AKS</span><span class="etag">Terraform</span><span class="etag">Azure DevOps</span><span class="etag">GitHub Actions</span><span class="etag">Log Analytics</span><span class="etag">Grafana</span>
-          </div>
+          <div class="exp-tags"><span class="etag">Azure AKS</span><span class="etag">Terraform</span><span class="etag">Azure DevOps</span><span class="etag">GitHub Actions</span><span class="etag">Log Analytics</span><span class="etag">Grafana</span></div>
         </div>
       </div>
       <div class="exp-row stagger-child">
@@ -372,7 +393,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
         </div>
         <div class="exp-content">
           <div class="exp-role-t">Site Reliability Engineer</div>
-          <p class="exp-summ">Mission-critical on-prem and hybrid enterprise systems. Strict focus on availability, performance, and operational stability for business-critical workloads at Procter &amp; Gamble.</p>
+          <p class="exp-summ">Mission-critical on-prem and hybrid enterprise systems at Procter &amp; Gamble. Strict focus on availability, performance, and operational stability.</p>
           <ul class="exp-buls">
             <li>Maintained large-scale Linux &amp; Windows Server production systems with strict SLOs</li>
             <li>Automated provisioning with Ansible, Bash, and Python</li>
@@ -381,9 +402,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
             <li>Developed runbooks to reduce MTTR across teams</li>
             <li>Introduced DevOps automation into traditional on-prem operations</li>
           </ul>
-          <div class="exp-tags">
-            <span class="etag">Ansible</span><span class="etag">Python</span><span class="etag">Bash</span><span class="etag">Prometheus</span><span class="etag">Grafana</span><span class="etag">Linux</span><span class="etag">Hybrid Cloud</span>
-          </div>
+          <div class="exp-tags"><span class="etag">Ansible</span><span class="etag">Python</span><span class="etag">Bash</span><span class="etag">Prometheus</span><span class="etag">Grafana</span><span class="etag">Linux</span><span class="etag">Hybrid Cloud</span></div>
         </div>
       </div>
       <div class="exp-row stagger-child">
@@ -402,9 +421,7 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
             <li>CloudWatch monitoring and open-source logging tools</li>
             <li>Maintained infrastructure diagrams, runbooks, and deployment guides</li>
           </ul>
-          <div class="exp-tags">
-            <span class="etag">AWS</span><span class="etag">Jenkins</span><span class="etag">Docker</span><span class="etag">Kubernetes</span><span class="etag">CloudWatch</span><span class="etag">RDS</span>
-          </div>
+          <div class="exp-tags"><span class="etag">AWS</span><span class="etag">Jenkins</span><span class="etag">Docker</span><span class="etag">Kubernetes</span><span class="etag">CloudWatch</span><span class="etag">RDS</span></div>
         </div>
       </div>
     </div>
@@ -437,14 +454,60 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
   <div class="wrap">
     <div class="sec-hd reveal">
       <div><div class="sec-num">03 — Research &amp; publications</div><h2 class="sec-title" style="color:var(--cream)">Published<br/><em>work.</em></h2></div>
-      <p class="sec-sub">Peer-reviewed research at the intersection of AI, cloud security, and DevOps automation.</p>
+      <p class="sec-sub">Peer-reviewed research at the intersection of AI, cloud security, and DevOps automation. View all on ResearchGate.</p>
     </div>
     <div class="pub-list stagger-parent">
-      <div class="pub-row stagger-child"><div class="pub-n">01</div><div class="pub-body"><div class="pub-tag">AI · DevSecOps · Cloud Security</div><div class="pub-title">AI-Driven DevSecOps Automation: An Intelligent Framework for Continuous Cloud Security and Regulatory Compliance</div></div><div class="pub-arr">↗</div></div>
-      <div class="pub-row stagger-child"><div class="pub-n">02</div><div class="pub-body"><div class="pub-tag">Multi-Cloud · Reinforcement Learning</div><div class="pub-title">Multi-Cloud Governance Using Reinforcement Learning</div></div><div class="pub-arr">↗</div></div>
-      <div class="pub-row stagger-child"><div class="pub-n">03</div><div class="pub-body"><div class="pub-tag">NLP · Compliance · Policy-as-Code</div><div class="pub-title">Predictive Compliance Automation Using NLP and Policy-as-Code</div></div><div class="pub-arr">↗</div></div>
-      <div class="pub-row stagger-child"><div class="pub-n">04</div><div class="pub-body"><div class="pub-tag">Container Security · Supply Chain · AI</div><div class="pub-title">AI-Based Supply Chain Security for Containerized Applications</div></div><div class="pub-arr">↗</div></div>
-      <div class="pub-row stagger-child"><div class="pub-n">05</div><div class="pub-body"><div class="pub-tag">CI/CD · DevOps Automation · AI</div><div class="pub-title">AI Driven DevOps Automation for CI/CD Pipeline Optimization</div></div><div class="pub-arr">↗</div></div>
+
+      <div class="pub-row stagger-child">
+        <div class="pub-n">01</div>
+        <div class="pub-body">
+          <div class="pub-tag">AI · DevSecOps · Cloud Security</div>
+          <div class="pub-title">AI-Driven DevSecOps Automation: An Intelligent Framework for Continuous Cloud Security and Regulatory Compliance</div>
+          <a href="https://www.researchgate.net/profile/Roshan-Kakarla-2" target="_blank" class="pub-rg-btn">🔬 View on ResearchGate ↗</a>
+        </div>
+        <div class="pub-arr"></div>
+      </div>
+
+      <div class="pub-row stagger-child">
+        <div class="pub-n">02</div>
+        <div class="pub-body">
+          <div class="pub-tag">Multi-Cloud · Reinforcement Learning</div>
+          <div class="pub-title">Multi-Cloud Governance Using Reinforcement Learning</div>
+          <a href="https://www.researchgate.net/profile/Roshan-Kakarla-2" target="_blank" class="pub-rg-btn">🔬 View on ResearchGate ↗</a>
+        </div>
+        <div class="pub-arr"></div>
+      </div>
+
+      <div class="pub-row stagger-child">
+        <div class="pub-n">03</div>
+        <div class="pub-body">
+          <div class="pub-tag">NLP · Compliance · Policy-as-Code</div>
+          <div class="pub-title">Predictive Compliance Automation Using NLP and Policy-as-Code</div>
+          <a href="https://www.researchgate.net/profile/Roshan-Kakarla-2" target="_blank" class="pub-rg-btn">🔬 View on ResearchGate ↗</a>
+        </div>
+        <div class="pub-arr"></div>
+      </div>
+
+      <div class="pub-row stagger-child">
+        <div class="pub-n">04</div>
+        <div class="pub-body">
+          <div class="pub-tag">Container Security · Supply Chain · AI</div>
+          <div class="pub-title">AI-Based Supply Chain Security for Containerized Applications</div>
+          <a href="https://www.researchgate.net/profile/Roshan-Kakarla-2" target="_blank" class="pub-rg-btn">🔬 View on ResearchGate ↗</a>
+        </div>
+        <div class="pub-arr"></div>
+      </div>
+
+      <div class="pub-row stagger-child">
+        <div class="pub-n">05</div>
+        <div class="pub-body">
+          <div class="pub-tag">CI/CD · DevOps Automation · AI</div>
+          <div class="pub-title">AI Driven DevOps Automation for CI/CD Pipeline Optimization</div>
+          <a href="https://www.researchgate.net/profile/Roshan-Kakarla-2" target="_blank" class="pub-rg-btn">🔬 View on ResearchGate ↗</a>
+        </div>
+        <div class="pub-arr"></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -495,22 +558,26 @@ footer{background:var(--ink);border-top:1px solid rgba(244,241,234,.07);padding:
         <a href="mailto:roshank041089@gmail.com" class="c-email">roshank041089@gmail.com</a>
       </div>
       <div class="c-cards reveal-right">
-        <a href="https://linkedin.com/in/roshan-k-221681200" class="c-card" target="_blank">
+        <a href="https://www.linkedin.com/in/roshan-k-221681200" class="c-card" target="_blank">
           <div class="c-card-icon">💼</div>
           <div><div class="c-card-lbl">LinkedIn</div><div class="c-card-val">linkedin.com/in/roshan-k-221681200</div></div>
+        </a>
+        <a href="https://www.researchgate.net/profile/Roshan-Kakarla-2" class="c-card" target="_blank">
+          <div class="c-card-icon">🔬</div>
+          <div><div class="c-card-lbl">ResearchGate</div><div class="c-card-val">5 published papers</div></div>
         </a>
         <a href="https://github.com/Rkaka1041" class="c-card" target="_blank">
           <div class="c-card-icon">🐙</div>
           <div><div class="c-card-lbl">GitHub</div><div class="c-card-val">github.com/Rkaka1041</div></div>
         </a>
+        <a href="ROSHAN_RESUME_DEVOPS_ENGINEER.pdf" download class="c-card">
+          <div class="c-card-icon">📄</div>
+          <div><div class="c-card-lbl">Resume</div><div class="c-card-val">Download PDF ↓</div></div>
+        </a>
         <a href="tel:2242553103" class="c-card">
           <div class="c-card-icon">📞</div>
           <div><div class="c-card-lbl">Phone</div><div class="c-card-val">(224) 255-3103</div></div>
         </a>
-        <div class="c-card">
-          <div class="c-card-icon">📍</div>
-          <div><div class="c-card-lbl">Location</div><div class="c-card-val">Chicago, Illinois · United States</div></div>
-        </div>
       </div>
     </div>
   </div>
@@ -532,51 +599,27 @@ document.querySelectorAll('a,button,.exp-row,.pub-row,.proj-card,.sk-cell').forE
   el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
   el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
 });
-window.addEventListener('scroll',()=>{
-  document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>60);
-});
-const revealObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-    }
-  });
-},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
+window.addEventListener('scroll',()=>{document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>60)});
+const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger-parent').forEach(el=>revealObs.observe(el));
 const countObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting&&!e.target.dataset.counted){
       e.target.dataset.counted='1';
       const target=parseInt(e.target.dataset.target);
-      let start=0;const dur=1200;const step=dur/target;
-      const timer=setInterval(()=>{
-        start++;e.target.textContent=start+'+';
-        if(start>=target){e.target.textContent=target+'+';clearInterval(timer);}
-      },step);
+      let start=0;const step=1200/target;
+      const timer=setInterval(()=>{start++;e.target.textContent=start+'+';if(start>=target){e.target.textContent=target+'+';clearInterval(timer);}},step);
     }
   });
 },{threshold:.5});
 document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
 const photoWrap=document.querySelector('.photo-wrap');
 if(photoWrap){
-  photoWrap.addEventListener('mousemove',e=>{
-    const rect=photoWrap.getBoundingClientRect();
-    const x=(e.clientX-rect.left)/rect.width-.5;
-    const y=(e.clientY-rect.top)/rect.height-.5;
-    photoWrap.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`;
-  });
-  photoWrap.addEventListener('mouseleave',()=>{
-    photoWrap.style.transform='perspective(800px) rotateY(0deg) rotateX(0deg)';
-    photoWrap.style.transition='transform .6s cubic-bezier(.25,.46,.45,.94)';
-  });
+  photoWrap.addEventListener('mousemove',e=>{const rect=photoWrap.getBoundingClientRect();const x=(e.clientX-rect.left)/rect.width-.5;const y=(e.clientY-rect.top)/rect.height-.5;photoWrap.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`;});
+  photoWrap.addEventListener('mouseleave',()=>{photoWrap.style.transform='perspective(800px) rotateY(0deg) rotateX(0deg)';photoWrap.style.transition='transform .6s cubic-bezier(.25,.46,.45,.94)';});
   photoWrap.addEventListener('mouseenter',()=>{photoWrap.style.transition='transform .1s'});
 }
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
-  });
-});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
 </script>
 </body>
 </html>
